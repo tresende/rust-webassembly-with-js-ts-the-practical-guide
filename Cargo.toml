@@ -10,11 +10,3 @@ edition = "2021"
 [[bin]]
 name = "snake_game"
 path = "main.rs"
-
-
-[source.crates-io]
-registry = "https://github.com/rust-lang/crates.io-index"
-replace-with = 'ustc'
-
-[source.ustc]
-registry = "git://mirrors.ustc.edu.cn/crates.io-index"
