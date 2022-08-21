@@ -1,7 +1,10 @@
 fn main() {
     let message = "Hello World";
-    println!("{}", message);
+    print_welcome(message);
 }
 
+fn print_welcome(text: &str) -> &str {
+    println!("Message: {}", text);
 
-
+    ""
+}
