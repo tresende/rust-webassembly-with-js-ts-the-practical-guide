@@ -1,10 +1,12 @@
 fn main() {
     let message = "Hello World";
-    print_welcome(message);
+    let message_2 = format_message(message);
+    println!("{}", message_2)
 }
 
-fn print_welcome(text: &str) -> &str {
-    println!("Message: {}", text);
+fn format_message(text: &str) -> &str {
+    let new_message = format!("message: {}", text);
 
-    ""
+    //return "Hi there!";
+    Box::leak(new_message.into_boxed_str())
 }
