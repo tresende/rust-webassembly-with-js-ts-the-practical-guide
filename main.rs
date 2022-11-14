@@ -1,7 +1,7 @@
 fn main() {
-    let message = String::from("Hello");
-    let new_message = extend_message(message);
-    println!("new_message: {}", new_message);
+    let mut message = String::from("Hello");
+    message = extend_message(message);
+    println!("new_message: {}", message);
 }
 
 fn extend_message(mut a: String) -> String {
