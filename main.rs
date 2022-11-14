@@ -1,15 +1,11 @@
 fn main() {
-    let mut message = String::from("Hello");
-    let message3 = &message;
+    let a = 10;
+    let b = &a;
+    let c = &b;
+    let d = &c;
 
-    let message2 = &mut message; // & -> borrowed reference
-
-    unpredictable_mutate(message2);
-    println!("{}", message2);
-
-    println!("{}", message);
-}
-
-fn unpredictable_mutate(val: &mut String) {
-    val.push_str("_unpredictable")
+    println!("{}", c);
+    println!("{}", a == *b);
+    println!("{}", a == **c);
+    println!("{}", a == ***d);
 }
