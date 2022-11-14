@@ -1,20 +1,9 @@
 fn main() {
     let mut message = String::from("Hello");
-    message = extend_message(message);
+    let message2 = &mut message; // & -> borrowed reference
 
-    let age = 30;
-    extend_age(age);
-    println!("{}", age);
+    message2.push_str(" world");
 
-    println!("new_message: {}", message);
-}
-
-fn extend_message(mut a: String) -> String {
-    a.push_str("World");
-    a
-}
-
-fn extend_age(mut a: u32) -> u32 {
-    a += 100;
-    a
+    println!("{}", message2);
+    println!("{}", message);
 }
